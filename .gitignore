@@ -1,0 +1,33 @@
+# 데이터 / 산출물 (대용량·라이선스, 재생성 가능하므로 저장소에 올리지 않음)
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# 파이썬
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# 가상환경
+.venv/
+venv/
+env/
+.conda/
+
+# 오디오 / 임시 파일
+*.wav
+*.mp3
+*.tmp
+
+# 모델 가중치 캐시
+*.pt
+*.bin
+.cache/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

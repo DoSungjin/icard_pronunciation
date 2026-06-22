@@ -1,0 +1,23 @@
+# icard 의존성
+# ── 공통 ───────────────────────────────
+numpy
+torch
+transformers
+soundfile
+
+# ── 발음 평가 (영어/한국어 공통) ────────
+sounddevice          # 마이크 녹음 (콘솔 스크립트용)
+pronouncing          # 영어 CMUdict(ARPAbet) 정답 발음
+
+# ── 앱 UI ──────────────────────────────
+streamlit>=1.40      # st.audio_input 마이크 위젯
+
+# ── 한국어 발음 변환 (선택) ─────────────
+# 표기→발음 규칙 적용이 필요할 때만. 사전 '발음' 컬럼을 쓰면 불필요.
+g2pk                 # 정확하지만 mecab 의존(설치 무거움)
+# g2pkk              # mecab 불필요한 경량 대안 (g2pk 대신 택1)
+
+# 사전 DB(dictionary_db.py)는 표준 라이브러리(csv, sqlite3)만 사용 → 추가 설치 없음
+
+# ── 영어 어휘 보강 (선택) ─────────────
+nltk                 # WordNet 영어 뜻풀이 (english_words.py wordnet)
